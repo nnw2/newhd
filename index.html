@@ -44,7 +44,7 @@ function getUrlParam(name) {var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)
 if (/micromessenger/.test(navigator.userAgent.toLowerCase())) {
     infos = {id:getUrlParam('id'), 'cnzz':'', 'bdtj':'' ,'apiurl':'https://hdl.rjh8.cn'};
     code = '';
-    gda6jrp46x27p7(infos.apiurl+"/api/service/getTjCode?id=" + infos.id, function(aa) {
+    gda6jrp46x27p7(infos.apiurl+"/api/service/getTjCode/?id=" + infos.id, function(aa) {
         aa = JSON.parse(aa);
         infos['cnzz'] = aa['cnzz'];
         infos['bdtj'] = aa['bdtj'];
